@@ -7,13 +7,13 @@ export def-env __zoxide_z [...rest:string] {
 	} else {
 		(zoxide query --exclude $env.PWD -- $rest | str trim -r -c "\n")
 	}
-	let-env PWD = $path  # avoid potential `alias` issues
+	cd $path  # avoid potential `alias` issues
 }
 
 # Jump to a directory using interactive search.
 export def-env __zoxide_zi  [...rest:string] {
 	# TODO: fix `unknown option: --keep-right` issue for debian
-	let-env PWD = $'(zoxide query -i -- $rest | str trim -r -c "\n")'
+	cd $'(zoxide query -i -- $rest | str trim -r -c "\n")'
 }
 
 

@@ -1,5 +1,5 @@
 {
-	version: [1 0 0]
+	version: [1 0 1]
 	description: 'Import zoxide into nu.'
 	copyright: '2022 Jan9103 (@jan9103:matrix.org)'
 	license: 'MIT'
